@@ -1,0 +1,40 @@
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Arionpay.api_key', true), 'arionpay_api_key', ['class' => 'form-label']);
+    $this->Form->fieldText('api_key', (isset($meta['api_key']) ? $meta['api_key'] : null), ['id' => 'arionpay_api_key', 'class' => 'form-control', 'placeholder' => 'pk_...']);
+    ?>
+    <small class="form-text text-muted"><?php $this->_('Arionpay.api_key_note'); ?></small>
+</div>
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Arionpay.api_secret', true), 'arionpay_api_secret', ['class' => 'form-label']);
+    $this->Form->fieldPassword('api_secret', ['id' => 'arionpay_api_secret', 'class' => 'form-control', 'value' => (isset($meta['api_secret']) ? $meta['api_secret'] : null)]);
+    ?>
+    <small class="form-text text-muted"><?php $this->_('Arionpay.api_secret_note'); ?></small>
+</div>
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Arionpay.webhook_secret', true), 'arionpay_webhook_secret', ['class' => 'form-label']);
+    $this->Form->fieldPassword('webhook_secret', ['id' => 'arionpay_webhook_secret', 'class' => 'form-control', 'value' => (isset($meta['webhook_secret']) ? $meta['webhook_secret'] : null)]);
+    ?>
+    <small class="form-text text-muted"><?php $this->_('Arionpay.webhook_secret_note'); ?></small>
+</div>
+<div class="mb-3 form-check">
+    <?php
+    $this->Form->fieldCheckbox('test_mode', 'true', ((isset($meta['test_mode']) ? $meta['test_mode'] : 'true') === 'true'), ['id' => 'arionpay_test_mode', 'class' => 'form-check-input']);
+    $this->Form->label($this->_('Arionpay.test_mode', true), 'arionpay_test_mode', ['class' => 'form-check-label']);
+    ?>
+    <br><small class="form-text text-muted"><?php $this->_('Arionpay.test_mode_note'); ?></small>
+</div>
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Arionpay.base_url', true), 'arionpay_base_url', ['class' => 'form-label']);
+    $this->Form->fieldText('base_url', (isset($meta['base_url']) ? $meta['base_url'] : null), ['id' => 'arionpay_base_url', 'class' => 'form-control', 'placeholder' => 'https://merchant.arionpay.com']);
+    ?>
+    <small class="form-text text-muted"><?php $this->_('Arionpay.base_url_note'); ?></small>
+</div>
+<div class="mb-3">
+    <label class="form-label"><?php $this->_('Arionpay.webhook_url'); ?></label>
+    <input type="text" class="form-control" readonly value="<?php echo $this->Html->safe(isset($webhook_url) ? $webhook_url : ''); ?>">
+    <small class="form-text text-muted"><?php $this->_('Arionpay.webhook_url_note'); ?></small>
+</div>

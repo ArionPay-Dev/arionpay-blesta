@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "name": "Arionpay.name",
+    "description": "Arionpay.description",
+    "authors": [
+        {
+            "name": "ArionPay",
+            "url": "https://arionpay.com"
+        }
+    ],
+    "currencies": ["USD", "EUR", "GBP", "CAD", "AUD", "CHF", "JPY", "TRY", "AED", "INR", "BRL", "RUB", "CNY", "SGD", "HKD", "KRW", "MXN", "PLN", "SEK", "NOK", "ZAR"],
+    "signup_url": "https://arionpay.com",
+    "logo": "views/default/images/logo.png"
+}
